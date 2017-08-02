@@ -74,16 +74,4 @@ class Statuses extends Service
     {
         return $this->makeLabel($status);
     }
-
-    /**
-     * If status is listed
-     *
-     * @param string $status
-     *
-     * @return bool
-     */
-    public function isListed(string $status): bool
-    {
-        return array_key_exists($status, $this->labels);
-    }
 }

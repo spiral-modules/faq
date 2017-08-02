@@ -9,6 +9,7 @@ use Spiral\Http\Request\RequestFilter;
  * Class FAQRequest
  *
  * @package Spiral\FAQ\Requests
+ * @property string $status
  */
 class FAQRequest extends RequestFilter
 {
