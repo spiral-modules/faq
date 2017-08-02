@@ -39,7 +39,6 @@
     </vault:card>
 
     <vault:listing listing="<?= $listing ?>" as="entity" color="" class="striped">
-
         <grid:cell label="[[Id:]]" value="<?= $entity->id ?>" sorter="id"/>
         <grid:cell label="[[Question:]]" sorter="question">
             <span title="<?= e($entity->question) ?>"><?= \Spiral\Support\Strings::shorter(e($entity->question), 50) ?></span>
@@ -49,13 +48,8 @@
         </grid:cell>
         <grid:cell label="[[Order:]]" value="<?= $entity->order ?>" sorter="order"/>
         <grid:cell class="right-align">
-            <vault:uri target="faq:edit" icon="edit" options="<?= ['id' => $entity->primaryKey()] ?>" class="waves-effect btn-flat"/>
-        </grid:cell>
-
-        <grid:cell class="right-align">
             <vault:allowed permission="vault.faq.view">
-                <vault:uri target="faq:view" icon="visibility" options="<?= ['id' => $entity->primaryKey()] ?>" class="btn waves-effect"> [[View]]
-                </vault:uri>
+                <vault:uri target="faq:edit" icon="edit" options="<?= ['id' => $entity->primaryKey()] ?>" class="waves-effect btn-flat"/>
             </vault:allowed>
         </grid:cell>
     </vault:listing>
