@@ -22,7 +22,7 @@ class FAQStatus extends EnumColumn
     /**
      * {@inheritdoc}
      */
-    const DEFAULT        = self::DRAFT;
+    const DEFAULT        = self::ACTIVE;
 
     /**
      * If status is active.
