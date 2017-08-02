@@ -33,6 +33,8 @@ class FAQ extends Record
      */
     const TABLE = 'faqs';
 
+    const DATABASE = 'faq';
+
     /**
      * {@inheritdoc}
      */
