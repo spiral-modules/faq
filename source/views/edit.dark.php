@@ -14,18 +14,17 @@
     <div class="row">
         <div class="col s12 m8">
             <vault:form action="<?= vault()->uri('faq:update', ['id' => $entity->primaryKey()]) ?>">
-                <div class="row">
-                    <div class="col s12 m12">
-                        <form:input label="[[Question:]]" name="question" value="<?= e($entity->question) ?>"/>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12 m12">
-                        <form:textarea label="[[Answer:]]" name="answer" rows="20" value="<?= $entity->answer ?>"/>
-                    </div>
-                </div>
-                <form:select label="[[Status:]]" name="status" values="<?= $statuses->labels(true) ?>" value="<?= $entity->status ?>"/>
+                <form:input label="[[Question:]]" name="question" value="<?= e($entity->question) ?>"/>
+                <form:textarea label="[[Answer:]]" name="answer" rows="20" value="<?= $entity->answer ?>"/>
 
+                <div class="row">
+                    <div class="col s12 m12">
+                        <form:select label="[[Status:]]" name="status" values="<?= $statuses->labels(true) ?>" value="<?= $entity->status ?>"/>
+                    </div>
+                    <div class="col s12 m12">
+                        <form:input label="[[Order:]]" name="order" value="<?= $entity->order ?>"/>
+                    </div>
+                </div>
                 <div class="right-align">
                     <input type="submit" value="[[UPDATE]]" class="btn waves-effect waves-light"/>
                 </div>

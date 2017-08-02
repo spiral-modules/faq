@@ -40,6 +40,7 @@ class Listings
 
         $listing->addSorter('id', new BinarySorter('id'));
         $listing->addSorter('question', new BinarySorter('question'));
+        $listing->addSorter('order', new BinarySorter('order'));
 
         $listing->addFilter(
             'status',

@@ -10,6 +10,7 @@ use Spiral\Http\Request\RequestFilter;
  *
  * @package Spiral\FAQ\Requests
  * @property string $status
+ * @property float  $order
  */
 class FAQRequest extends RequestFilter
 {
@@ -20,6 +21,7 @@ class FAQRequest extends RequestFilter
         'question' => 'data:question',
         'answer'   => 'data:answer',
         'status'   => 'data:status',
+        'order'    => 'data:order',
     ];
 
     const VALIDATES = [
@@ -42,5 +44,6 @@ class FAQRequest extends RequestFilter
     const SETTERS = [
         'question' => 'trim',
         'answer'   => 'trim',
+        'order'    => 'floatval',
     ];
 }

@@ -24,7 +24,8 @@ class FAQ extends Record
         'id'       => 'primary',
         'status'   => FAQStatus::class,
         'question' => 'string(255)',
-        'answer'   => 'text'
+        'answer'   => 'text',
+        'order'    => 'float',
     ];
 
     /**
@@ -37,7 +38,8 @@ class FAQ extends Record
      */
     const FILLABLE = [
         'question',
-        'answer'
+        'answer',
+        'order'
     ];
 
     const DEFAULTS = [];

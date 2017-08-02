@@ -15,17 +15,17 @@
     <div class="row">
         <div class="col s12 m8">
             <vault:form action="<?= vault()->uri('faq:create') ?>">
+                <form:input label="[[Question:]]" name="question"/>
+                <form:textarea label="[[Answer:]]" name="answer" rows="20"/>
+
                 <div class="row">
                     <div class="col s12 m12">
-                        <form:input label="[[Question:]]" name="question"/>
+                        <form:select label="[[Status:]]" name="status" values="<?= $statuses->labels(true) ?>"/>
                     </div>
-                </div>
-                <div class="row">
                     <div class="col s12 m12">
-                        <form:textarea label="[[Answer:]]" name="answer" rows="20"/>
+                        <form:input label="[[Order:]]" name="order"/>
                     </div>
                 </div>
-                <form:select label="[[Status:]]" name="status" values="<?= $statuses->labels(true) ?>"/>
 
                 <div class="right-align">
                     <input type="submit" value="[[CREATE]]" class="btn waves-effect waves-light"/>

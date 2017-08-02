@@ -17,6 +17,7 @@ use Spiral\Translator\Traits\TranslatorTrait;
  *
  * @package Spiral\FAQ\Controllers
  * @property \Spiral\Views\ViewsInterface $views
+ * @property \Spiral\Vault\Vault          $vault
  */
 class FAQController extends Controller
 {
@@ -24,7 +25,7 @@ class FAQController extends Controller
 
     const GUARD_NAMESPACE = 'vault.faq';
 
-    /** @var \Spiral\FAQ\Database\Sources\FAQSource  */
+    /** @var \Spiral\FAQ\Database\Sources\FAQSource */
     private $source;
 
     /**

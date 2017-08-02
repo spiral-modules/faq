@@ -40,13 +40,14 @@
 
     <vault:listing listing="<?= $listing ?>" as="entity" color="" class="striped">
 
-        <grid:cell label="[[Id:]]" value="<?= e($entity->id) ?>" sorter="id"/>
+        <grid:cell label="[[Id:]]" value="<?= $entity->id ?>" sorter="id"/>
         <grid:cell label="[[Question:]]" sorter="question">
             <span title="<?= e($entity->question) ?>"><?= \Spiral\Support\Strings::shorter(e($entity->question), 50) ?></span>
         </grid:cell>
         <grid:cell label="[[Answer:]]">
             <span title="<?= e($entity->answer) ?>"><?= \Spiral\Support\Strings::shorter(e($entity->answer), 100) ?></span>
         </grid:cell>
+        <grid:cell label="[[Order:]]" value="<?= $entity->order ?>" sorter="order"/>
         <grid:cell class="right-align">
             <vault:uri target="faq:edit" icon="edit" options="<?= ['id' => $entity->primaryKey()] ?>" class="waves-effect btn-flat"/>
         </grid:cell>
