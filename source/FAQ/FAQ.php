@@ -77,7 +77,7 @@ class FAQ
      */
     protected function getList(): array
     {
-        $records = $this->source->find()->orderBy('id', 'ASC')->fetchAll();
+        $records = $this->source->find()->orderBy('order', 'ASC')->fetchAll();
 
         $output = \array_map(function (\Spiral\FAQ\Database\FAQ $faq) {
             return $faq->packFields();
