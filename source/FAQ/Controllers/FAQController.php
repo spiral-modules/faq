@@ -79,7 +79,7 @@ class FAQController extends Controller
         }
         $this->allows('view', ['entity' => $faq]);
 
-        return $this->views->render('keeper:faq/edit', [
+        return $this->views->render('faq:edit', [
             'entity'   => $faq,
             'statuses' => $statuses
         ]);
