@@ -19,10 +19,10 @@
                 <form:textarea label="[[Answer:]]" name="answer" rows="20"/>
 
                 <div class="row">
-                    <div class="col s12 m12">
+                    <div class="col s12 m6">
                         <form:select label="[[Status:]]" name="status" values="<?= $statuses->labels(true) ?>"/>
                     </div>
-                    <div class="col s12 m12">
+                    <div class="col s12 m6">
                         <form:input label="[[Order:]]" name="order"/>
                     </div>
                 </div>
